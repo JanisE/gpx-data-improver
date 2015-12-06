@@ -1,0 +1,13 @@
+{
+	"name": "GpxDataImprover",
+	"version": "1.0.0",
+	"main": "path/to/main.css/TOTALLY_NOT_USED_BUT_WHO_KNOWS",
+	"ignore": [
+		".jshintrc",
+		"**/*.txt"
+	],
+	"dependencies": {
+	},
+	"devDependencies": {
+	}
+}

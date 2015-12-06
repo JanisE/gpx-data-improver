@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+version="1.1"
+creator="Izveidots ar Android ierīci, izmantojot Google manas pēdas"
+xmlns="http://www.topografix.com/GPX/1/1"
+xmlns:topografix="http://www.topografix.com/GPX/Private/TopoGrafix/0/1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
+<metadata>
+<name><![CDATA[2015-11-28 09:16]]></name>
+<desc><![CDATA[]]></desc>
+</metadata>
+<trk>
+<name><![CDATA[2015-11-28 09:16]]></name>
+<desc><![CDATA[]]></desc>
+<type><![CDATA[riteņbraukšana]]></type>
+<extensions><topografix:color>c0c0c0</topografix:color></extensions>
+<trkseg>
+<trkpt lat="56.927813" lon="24.106714">
+<ele>37</ele>
+<time>2015-11-28T07:33:35.272Z</time>
+</trkpt>
+<trkpt lat="56.927834" lon="24.10685">
+<ele>35</ele>
+<time>2015-11-28T07:33:40.451Z</time>
+</trkpt>
+<trkpt lat="56.927834" lon="24.106879">
+<ele>35</ele>
+<time>2015-11-28T07:33:41.346Z</time>
+</trkpt>
+<trkpt lat="56.927852" lon="24.107037">
+<ele>31</ele>
+<time>2015-11-28T07:34:05.468Z</time>
+</trkpt>
+<trkpt lat="56.92789" lon="24.10707">
+<ele>32</ele>
+<time>2015-11-28T07:34:06.285Z</time>
+</trkpt>
+<trkpt lat="56.927976" lon="24.107094">
+<ele>31</ele>
+<time>2015-11-28T07:34:08.362Z</time>
+</trkpt>
+<trkpt lat="56.928022" lon="24.107099">
+<ele>31</ele>
+<time>2015-11-28T07:34:09.285Z</time>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>

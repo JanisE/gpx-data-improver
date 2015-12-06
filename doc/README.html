@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
+</head>
+<body>
+<h1 id="gpxdataimprover-gpx-average-speed-increaser-and-endomondo-graph-and-stats-improver">GpxDataImprover — GPX Average Speed Increaser and Endomondo Graph and Stats Improver</h1>
+<h2 id="install">Install</h2>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">git</span> clone https://github.com/JanisE/gpx-data-improver.git
+<span class="kw">cd</span> gpx-data-improver
+<span class="kw">npm</span> install --production</code></pre>
+<p>Now, it's installed in that particular folder. No instructions on how to do it globally.</p>
+<h3 id="development-notes">Development notes</h3>
+<p>Run <code>npm install</code> instead to include all additional dependencies used for testing and building.<br /><code>grunt</code> runs Grunt tasks (Mocha functionality tests, JSLint code correctness tests).<br /><code>gulp</code> runs Gulp tasks (generates some docs).</p>
+<h2 id="usage">Usage</h2>
+<p>You can get the usage help from the program by running <code>nodejs main</code>.</p>
+<p>Usage examples:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">nodejs</span> ./main.js --source test/split_at_gaps_in.gpx --split_at_gaps
+<span class="kw">nodejs</span> main --source test/even_out_in.gpx --even
+<span class="kw">/usr/bin/nodejs</span> ./main.js --source test/split_at_gaps_in.gpx --split_at_gaps <span class="kw">&gt;</span> testnew.gpx</code></pre>
+<p>Note: NodeJS is available as <code>nodejs</code> in some distributions, as <code>node</code> in others.</p>
+<h2 id="splitting-at-gaps-improving-average-speed">Splitting at gaps (improving average speed)</h2>
+<p>MyTracks, for example, does a pretty good job at detecting if you have stopped. In GPX file it results as two adjoining trackpoints being quite apart time-wise (e.g. being 43 seconds apart, while you're waiting for the green light at a crossing). Note: this program does not do such movement detection, it only takes advantage of it!</p>
+<p>However, both those trackpoints are still within the same track segment, and Endomondo will count that standing time towards your average track speed. Not fair.</p>
+<p>What GpxDataImprover's <code>--split_at_gaps</code> does is it splits the original track segment into several segments so that pauses bigger than 22 seconds are not included in any of them.</p>
+<p>An additional benefit (in combination with the formatting (<a href="#formatting">Formatting</a>)) is an easier manual removal of unneeded trackpoints during moving inside buildings, when you are not exactly standing still, so the movement detection still stores some trackpoints here and there: they are now already grouped into segments and some of them are already removed completely (one-point segments are dropped).</p>
+<h2 id="even-out-algorithms">Even-out algorithms</h2>
+<p>I guess that Endomondo does not deal with milliseconds in GPX files, resulting in ugly graphs, unreal maximum speeds etc. GpxDataImprover's <code>--even</code> is an attempt to adjust the GPX data so that the trackpoints are set exactly on whole seconds, optionally spaced out in intervals not shorter than several (not one) seconds (trying to achieve an effect of a smoother movement).</p>
+<h3 id="discard_spares">discard_spares</h3>
+<p>If there are several trackpoints within the same second (or the several seconds' interval), the first and the last ones are used to determine the position and elevation of the trackpoint (on whole seconds) (by linear interpolation), the rest of the trackpoints are ignored completely.</p>
+<p>Here is an example of a MyTracks track imported into Endomondo before and after applying evening out using the discard_spares algorithm (with 1 s intervals).</p>
+<p>Before:<br /><img src="doc/even_before.png" alt="A screenshot of an example Endomondo workout imported from MyTracks before evening out" /></p>
+<p>After:<br /><img src="doc/even_after_default.png" alt="A screenshot of an example Endomondo workout imported from MyTracks after evening out with the default parameters (1 s intervals, discard-spares algorithm)" /></p>
+<p>Notice that we can actually see now in the graph why the average speed is about 20 km/h. Also, the maximum speed has decreased from the unreal 412 km/h to 50 km/h, which is still too high but at least more real.</p>
+<p>(TODO all details)<br />(TODO drawing)</p>
+<h3 id="average_intervals">average_intervals</h3>
+<p>The position and elevation of a trackpoint is determined by averaging the data of the related second (or the several seconds' interval).</p>
+<p>(TODO all details)<br />(TODO drawing)</p>
+<h2 id="formatting">Formatting</h2>
+<p>The output is formatted so that it's easy to overview in a text editor and so that it can get imported to Endomondo:</p>
+<p><img src="doc/formatting.png" alt="A screenshot of an example formatting" /></p>
+</body>
+</html>

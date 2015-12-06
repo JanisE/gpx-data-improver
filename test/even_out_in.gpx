@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="GPSBabel - http://www.gpsbabel.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
+  <metadata><time>2015-11-28T18:26:53Z</time>
+    <bounds minlat="56.900283000" minlon="24.077871000" maxlat="56.971930000" maxlon="24.200008000"/>
+  </metadata>
+  <trk>
+    <name>Tech Industry</name>
+    <type>riteņbraukšana</type>
+    <extensions>
+</extensions>
+    <trkseg>
+
+
+
+      <trkpt lat="56.902770000" lon="24.093566000"><ele>35.000000</ele><time>2015-11-28T07:25:27.216Z</time></trkpt>
+      <trkpt lat="56.902816000" lon="24.093573000"><ele>33.000000</ele><time>2015-11-28T07:25:28.478Z</time></trkpt>
+      <trkpt lat="56.902875000" lon="24.093587000"><ele>34.000000</ele><time>2015-11-28T07:25:29.273Z</time></trkpt>
+      <trkpt lat="56.902938000" lon="24.093623000"><ele>34.000000</ele><time>2015-11-28T07:25:31.001Z</time></trkpt>
+      <trkpt lat="56.902994000" lon="24.093632000"><ele>36.000000</ele><time>2015-11-28T07:25:31.217Z</time></trkpt>
+      <trkpt lat="56.903054000" lon="24.093644000"><ele>37.000000</ele><time>2015-11-28T07:25:32.424Z</time></trkpt>
+      <trkpt lat="56.903107000" lon="24.093650000"><ele>38.000000</ele><time>2015-11-28T07:25:33.210Z</time></trkpt>
+  </trkseg>
+
+<trkseg>
+      <trkpt lat="56.903168000" lon="24.093671000"><ele>40.000000</ele><time>2015-11-28T07:25:34.463Z</time></trkpt>
+      <trkpt lat="56.903243000" lon="24.093681000"><ele>40.000000</ele><time>2015-11-28T07:25:35.330Z</time></trkpt>
+      <trkpt lat="56.903297000" lon="24.093698000"><ele>39.000000</ele><time>2015-11-28T07:25:36.486Z</time></trkpt>
+      <trkpt lat="56.903371000" lon="24.093721000"><ele>39.000000</ele><time>2015-11-28T07:25:37.211Z</time></trkpt>
+      <trkpt lat="56.903441000" lon="24.093720000"><ele>38.000000</ele><time>2015-11-28T07:25:38.462Z</time></trkpt>
+ 
+
+
+    </trkseg>
+  </trk>
+</gpx>

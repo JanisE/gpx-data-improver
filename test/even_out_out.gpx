@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="GPSBabel - http://www.gpsbabel.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.topografix.com/GPX/Private/TopoGrafix/0/1 http://www.topografix.com/GPX/Private/TopoGrafix/0/1/topografix.xsd">
+  <metadata><time>2015-11-28T18:26:53Z</time>
+    <bounds minlat="56.900283000" minlon="24.077871000" maxlat="56.971930000" maxlon="24.200008000"/>
+  </metadata>
+  <trk>
+    <name>Tech Industry</name>
+    <type>riteņbraukšana</type>
+    <extensions>
+</extensions>
+    <trkseg>
+      <trkpt lat="56.902798577" lon="24.093570349"><ele>33.757528</ele><time>2015-11-28T07:25:28.000Z</time></trkpt>
+      <trkpt lat="56.902854740" lon="24.093582192"><ele>33.656604</ele><time>2015-11-28T07:25:29.000Z</time></trkpt>
+      <trkpt lat="56.902937964" lon="24.093622979"><ele>34.000000</ele><time>2015-11-28T07:25:31.000Z</time></trkpt>
+      <trkpt lat="56.903032923" lon="24.093639785"><ele>36.648716</ele><time>2015-11-28T07:25:32.000Z</time></trkpt>
+      <trkpt lat="56.903092840" lon="24.093648397"><ele>37.732824</ele><time>2015-11-28T07:25:33.000Z</time></trkpt>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="56.903214453" lon="24.093677194"><ele>40.000000</ele><time>2015-11-28T07:25:35.000Z</time></trkpt>
+      <trkpt lat="56.903274298" lon="24.093690853"><ele>39.420415</ele><time>2015-11-28T07:25:36.000Z</time></trkpt>
+      <trkpt lat="56.903349463" lon="24.093714306"><ele>39.000000</ele><time>2015-11-28T07:25:37.000Z</time></trkpt>
+      <trkpt lat="56.903415149" lon="24.093720369"><ele>38.369305</ele><time>2015-11-28T07:25:38.000Z</time></trkpt>
+    </trkseg>
+  </trk>
+</gpx>
