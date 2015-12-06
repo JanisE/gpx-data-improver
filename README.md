@@ -18,6 +18,14 @@ Run ```npm install``` instead to include all additional dependencies used for te
 
 ```gulp``` runs Gulp tasks (generates some docs).
 
+### Prerequisites
+
+As you can see, to install you need to run commands `git` and `npm`, and to use — `nodejs` (or `node`). These must be installed first if not already available.
+
+For Windows users,
+* for `git`, go to https://git-scm.com/, "Downloads for Windows" and install;
+* for `node` and `npm`, go to https://nodejs.org/, download and install (includes npm).
+
 ## Usage
 
 You can get the usage help from the program by running `nodejs main`.
