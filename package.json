@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"keywords": ["util", "gpx", "Endomondo", "MyTracks"],
 	"author": "Jānis Elmeris",
+	"license": "MIT",
 	"dependencies": {
 		"commander": ">=2.9.0 < 2.10.0",
 		"moment": ">=2.10.6 <2.11.0",
