@@ -13,7 +13,9 @@ Now, it's installed in that particular folder. No instructions on how to do it g
 ### Development notes
 
 Run ```npm install``` instead to include all additional dependencies used for testing and building.
+
 ```grunt``` runs Grunt tasks (Mocha functionality tests, JSLint code correctness tests).
+
 ```gulp``` runs Gulp tasks (generates some docs).
 
 ## Usage
@@ -37,7 +39,7 @@ However, both those trackpoints are still within the same track segment, and End
 
 What GpxDataImprover's `--split_at_gaps` does is it splits the original track segment into several segments so that pauses bigger than 22 seconds are not included in any of them.
 
-An additional benefit (in combination with the formatting ([Formatting][])) is an easier manual removal of unneeded trackpoints during moving inside buildings, when you are not exactly standing still, so the movement detection still stores some trackpoints here and there: they are now already grouped into segments and some of them are already removed completely (one-point segments are dropped).
+An additional benefit (in combination with the formatting ([Formatting](#formatting))) is an easier manual removal of unneeded trackpoints during moving inside buildings, when you are not exactly standing still, so the movement detection still stores some trackpoints here and there: they are now already grouped into segments and some of them are already removed completely (one-point segments are dropped).
 
 ## Even-out algorithms
 
