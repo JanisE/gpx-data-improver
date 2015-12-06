@@ -14,7 +14,7 @@ Now, it's installed in that particular folder. No instructions on how to do it g
 
 Run ```npm install``` instead to include all additional dependencies used for testing and building.
 
-```grunt``` runs Grunt tasks (Mocha functionality tests, JSLint code correctness tests).
+```grunt``` runs Grunt tasks (Mocha functionality tests, JSHint code correctness tests).
 
 ```gulp``` runs Gulp tasks (generates some docs).
 
@@ -24,7 +24,7 @@ As you can see, to install you need to run commands `git` and `npm`, and to use 
 
 For Windows users,
 * for `git`, go to https://git-scm.com/, "Downloads for Windows" and install;
-* for `node` and `npm`, go to https://nodejs.org/, download and install (includes npm).
+* for `node` and `npm`, go to https://nodejs.org/, download and install (includes `npm`).
 
 ## Usage
 
