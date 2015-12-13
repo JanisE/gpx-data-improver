@@ -34,7 +34,16 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <span class="kw">npm</span> install --production</code></pre>
 <p>Now, it's installed in that particular folder. No instructions on how to do it globally.</p>
 <h3 id="development-notes">Development notes</h3>
-<p>Run <code>npm install</code> instead to include all additional dependencies used for testing and building.<br /><code>grunt</code> runs Grunt tasks (Mocha functionality tests, JSLint code correctness tests).<br /><code>gulp</code> runs Gulp tasks (generates some docs).</p>
+<p>Run <code>npm install</code> instead to include all additional dependencies used for testing and building.</p>
+<p><code>grunt</code> runs Grunt tasks (Mocha functionality tests, JSHint code correctness tests).</p>
+<p><code>gulp</code> runs Gulp tasks (generates some docs).</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>As you can see, to install you need to run commands <code>git</code> and <code>npm</code>, and to use — <code>nodejs</code> (or <code>node</code>). These have to be installed first if not already available.</p>
+<p>For Windows users,</p>
+<ul>
+<li>for <code>git</code>, go to <a href="https://git-scm.com/">https://git-scm.com/</a>, &quot;Downloads for Windows&quot; and install;<br /></li>
+<li>for <code>node</code> and <code>npm</code>, go to <a href="https://nodejs.org/">https://nodejs.org/</a>, download and install (includes <code>npm</code>).</li>
+</ul>
 <h2 id="usage">Usage</h2>
 <p>You can get the usage help from the program by running <code>nodejs main</code>.</p>
 <p>Usage examples:</p>
@@ -50,12 +59,16 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h2 id="even-out-algorithms">Even-out algorithms</h2>
 <p>I guess that Endomondo does not deal with milliseconds in GPX files, resulting in ugly graphs, unreal maximum speeds etc. GpxDataImprover's <code>--even</code> is an attempt to adjust the GPX data so that the trackpoints are set exactly on whole seconds, optionally spaced out in intervals not shorter than several (not one) seconds (trying to achieve an effect of a smoother movement).</p>
 <h3 id="discard_spares">discard_spares</h3>
-<p>If there are several trackpoints within the same second (or the several seconds' interval), the first and the last ones are used to determine the position and elevation of the trackpoint (on whole seconds) (by linear interpolation), the rest of the trackpoints are ignored completely.</p>
+<p>If there are several trackpoints within the same second (or within the several seconds' interval), the first and the last ones are used to determine the position and elevation of the trackpoint (on whole seconds) (by linear interpolation), the rest of the trackpoints are ignored completely.</p>
+<p><img src="doc/even_method_discard_spares_algorithm.png" alt="A drawing of the discard_spares algorithm" /></p>
+<p>Here is an example of where the adjusted points appear on the map as opposed to the original track points:</p>
+<p><img src="doc/even_method_discard_spares_on_map.png" alt="An example image with both the original and adjusted trackpoints on the map" /></p>
 <p>Here is an example of a MyTracks track imported into Endomondo before and after applying evening out using the discard_spares algorithm (with 1 s intervals).</p>
-<p>Before:<br /><img src="doc/even_before.png" alt="A screenshot of an example Endomondo workout imported from MyTracks before evening out" /></p>
-<p>After:<br /><img src="doc/even_after_default.png" alt="A screenshot of an example Endomondo workout imported from MyTracks after evening out with the default parameters (1 s intervals, discard-spares algorithm)" /></p>
+<p>Before:</p>
+<p><img src="doc/even_before.png" alt="A screenshot of an example Endomondo workout imported from MyTracks before evening out" /></p>
+<p>After:</p>
+<p><img src="doc/even_after_default.png" alt="A screenshot of an example Endomondo workout imported from MyTracks after evening out with the default parameters (1 s intervals, discard-spares algorithm)" /></p>
 <p>Notice that we can actually see now in the graph why the average speed is about 20 km/h. Also, the maximum speed has decreased from the unreal 412 km/h to 50 km/h, which is still too high but at least more real.</p>
-<p>(TODO all details)<br />(TODO drawing)</p>
 <h3 id="average_intervals">average_intervals</h3>
 <p>The position and elevation of a trackpoint is determined by averaging the data of the related second (or the several seconds' interval).</p>
 <p>(TODO all details)<br />(TODO drawing)</p>

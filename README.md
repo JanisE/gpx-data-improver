@@ -20,7 +20,7 @@ Run ```npm install``` instead to include all additional dependencies used for te
 
 ### Prerequisites
 
-As you can see, to install you need to run commands `git` and `npm`, and to use — `nodejs` (or `node`). These must be installed first if not already available.
+As you can see, to install you need to run commands `git` and `npm`, and to use — `nodejs` (or `node`). These have to be installed first if not already available.
 
 For Windows users,
 * for `git`, go to https://git-scm.com/, "Downloads for Windows" and install;
@@ -55,20 +55,25 @@ I guess that Endomondo does not deal with milliseconds in GPX files, resulting i
 
 ### discard_spares
 
-If there are several trackpoints within the same second (or the several seconds' interval), the first and the last ones are used to determine the position and elevation of the trackpoint (on whole seconds) (by linear interpolation), the rest of the trackpoints are ignored completely.
+If there are several trackpoints within the same second (or within the several seconds' interval), the first and the last ones are used to determine the position and elevation of the trackpoint (on whole seconds) (by linear interpolation), the rest of the trackpoints are ignored completely.
+
+![A drawing of the discard_spares algorithm](doc/even_method_discard_spares_algorithm.png)
+
+Here is an example of where the adjusted points appear on the map as opposed to the original track points:
+
+![An example image with both the original and adjusted trackpoints on the map](doc/even_method_discard_spares_on_map.png)
 
 Here is an example of a MyTracks track imported into Endomondo before and after applying evening out using the discard_spares algorithm (with 1 s intervals).
 
 Before:
+
 ![A screenshot of an example Endomondo workout imported from MyTracks before evening out](doc/even_before.png)
 
 After:
+
 ![A screenshot of an example Endomondo workout imported from MyTracks after evening out with the default parameters (1 s intervals, discard-spares algorithm)](doc/even_after_default.png)
 
 Notice that we can actually see now in the graph why the average speed is about 20 km/h. Also, the maximum speed has decreased from the unreal 412 km/h to 50 km/h, which is still too high but at least more real.
-
-(TODO all details)
-(TODO drawing)
 
 ### average_intervals
 
