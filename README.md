@@ -59,7 +59,7 @@ If there are several trackpoints within the same second (or within the several s
 
 ![A drawing of the discard_spares algorithm](doc/even_method_discard_spares_algorithm.png)
 
-Here is an example of where the adjusted points appear on the map as opposed to the original track points:
+Here is an example of where the adjusted points appear on the map as opposed to the original track points (the difference from the actual track seems negligible):
 
 ![An example image with both the original and adjusted trackpoints on the map](doc/even_method_discard_spares_on_map.png)
 
