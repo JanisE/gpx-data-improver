@@ -37,6 +37,13 @@ nodejs main --source test/even_out_in.gpx --even
 /usr/bin/nodejs ./main.js --source test/split_at_gaps_in.gpx --split_at_gaps > testnew.gpx
 ```
 
+Examples of not outputting the modified GPX, but stats only:
+```
+nodejs main --source test/split_at_gaps_in.gpx --stats
+nodejs main --source test/split_at_gaps_in.gpx --split_at_gaps --even --stats
+
+```
+
 Note: NodeJS is available as `nodejs` in some distributions, as `node` in others.
 
 ## Splitting at gaps (improving average speed)
@@ -87,3 +94,13 @@ The position and elevation of a trackpoint is determined by averaging the data o
 The output is formatted so that it's easy to overview in a text editor and so that it can get imported to Endomondo:
 
 ![A screenshot of an example formatting](doc/formatting.png)
+
+## Analysing GPX
+
+Adding a `--stats` parameter causes not to output the resulting GPX content, but some stats (total distance, total duration and average speed) instead, which works also for unmodified (no other parameters beside `--source`) GPX sources, e.g.:
+```
+$ nodejs main --source test/split_at_gaps_in.gpx --stats
+{ 'Total length, km': 0.04,
+  'Total duration, min': 0.57,
+  'Average speed, km/h': 4.2 }
+```
