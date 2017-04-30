@@ -30,8 +30,8 @@ TrkPt.prototype.ToXmlStruct = function ()
 			lat: this.fLat.toFixed(9),	// 9 because in my MyTracks file 9 was the precision. TODO Should probably actually detect it.
 			lon: this.fLon.toFixed(9)	// 9 because in my MyTracks file 9 was the precision. TODO Should probably actually detect it.
 		},
-		ele: this.fEle.toFixed(6),	// 6 because in my MyTracks file 6 was the precision. TODO Should probably actually detect it.
-		time: this.oTime.toISOString()
+		ele: [this.fEle.toFixed(6)],	// 6 because in my MyTracks file 6 was the precision. TODO Should probably actually detect it.
+		time: [this.oTime.toISOString()]
 	};
 };
 
