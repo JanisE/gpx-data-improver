@@ -10,7 +10,7 @@ cd /home/janis/Projekti/gps/GpxDataImprover
 # Output stats for each file.
 for gpxFile in /home/janis/Darbvirsma/UntitledFolder/*.gpx
 do
-	echo "Stats for '$(basename $gpxFile)':"
+	echo "Stats for '$(basename "$gpxFile")':"
 	nodejs main --source "$gpxFile" --split_at_gaps --stats
 done
 
